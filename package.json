@@ -1,0 +1,26 @@
+{
+  "name": "apollo-graphql-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StevenJPx2/apollo-graphql-test.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/StevenJPx2/apollo-graphql-test/issues"
+  },
+  "homepage": "https://github.com/StevenJPx2/apollo-graphql-test#readme",
+  "dependencies": {
+    "apollo-server-express": "^2.17.0",
+    "graphql": "^15.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}

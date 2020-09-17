@@ -2,6 +2,8 @@
 .DS_Store
 *.mp4
 *.sketch
+node_modules/
+package-lock.json
 
 
 # Byte-compiled / optimized / DLL files
