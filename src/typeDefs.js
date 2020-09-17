@@ -2,45 +2,28 @@ import pkg from "apollo-server-express";
 const { gql } = pkg;
 
 export const typeDefs = gql`
-  type Host {
-    id: String!
-    meetingId: String!
-    hostHash: String!
-  }
-
-  type Attendee {
-    id: String!
-    meetingId: String!
-    attendeeHash: String!
-  }
-
-  type Meeting {
-    id: String!
-  }
-
-  type Presentation {
-    meetingId: String!
-  }
-
-  type Slide {
-    presentation: Presentation
-  }
-
-  type Template {
+  type Author {
+    id: ID!
     name: String!
-    type: Block
+    books: [Book]
   }
 
-  enum Block {
-    TEXT
-    QR
-    POLL
-    MATCH
-    FILL
+  type Book {
+    id: ID!
+    name: String!
+    author: Author!
+    pages: Int
   }
 
   type Query {
-    
+    book: Book
+    books: [Book]
+    author: Author
+    authors: [Author]
   }
 
+  type Mutation {
+    createBook(name: String!, authorId: ID!, pages: Int): Book
+    createAuthor(name: String!): Author
+  }
 `;

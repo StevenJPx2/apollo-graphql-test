@@ -6,19 +6,22 @@ import mongoPkg from "mongoose";
 
 const { connect } = mongoPkg;
 const { ApolloServer } = apolloPkg;
-
-connect("mongodb://localhost:27017/test", {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
-
 const PORT = 4000;
 
-const app = express();
+const startServer = async () => {
+  const app = express();
 
-const server = new ApolloServer({ typeDefs, resolvers });
-server.applyMiddleware({ app });
+  const server = new ApolloServer({ typeDefs, resolvers });
+  server.applyMiddleware({ app });
 
-app.listen({ port: PORT }, () =>
-  console.log(`🚀 Server ready at http://localhost:4000${server.graphqlPath}`)
-);
+  await connect("mongodb://localhost:27017/test", {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  });
+
+  app.listen({ port: PORT }, () =>
+    console.log(`🚀 Server ready at http://localhost:4000${server.graphqlPath}`)
+  );
+};
+
+startServer();
