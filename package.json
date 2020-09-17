@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
+  "type": "module",
   "scripts": {
-    "dev": "nodemon src/server.js"
+    "dev": "nodemon --exec babel-node src/server.js"
   },
   "repository": {
     "type": "git",
@@ -18,9 +19,14 @@
   "homepage": "https://github.com/StevenJPx2/apollo-graphql-test#readme",
   "dependencies": {
     "apollo-server-express": "^2.17.0",
-    "graphql": "^15.3.0"
+    "graphql": "^15.3.0",
+    "mongoose": "^5.10.5"
   },
   "devDependencies": {
+    "@babel/cli": "^7.11.6",
+    "@babel/core": "^7.11.6",
+    "@babel/node": "^7.10.5",
+    "@babel/preset-env": "^7.11.5",
     "nodemon": "^2.0.4"
   }
 }
