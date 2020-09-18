@@ -16,14 +16,18 @@ export const typeDefs = gql`
   }
 
   type Query {
-    book: Book
+    book(id: ID!): Book
     books: [Book]
-    author: Author
+    author(id: ID!): Author
     authors: [Author]
   }
 
   type Mutation {
     createBook(name: String!, authorId: ID!, pages: Int): Book
     createAuthor(name: String!): Author
+    deleteAllBooks: String
+    deleteAuthor(id: ID!): Author
+    deleteBook(id: ID!): Book
+    truncate: String
   }
 `;

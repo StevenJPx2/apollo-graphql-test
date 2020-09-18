@@ -16,6 +16,7 @@ const startServer = async () => {
 
   await connect("mongodb://localhost:27017/test", {
     useNewUrlParser: true,
+    useFindAndModify: false,
     useUnifiedTopology: true,
   });
 
