@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container {
+  @apply mx-auto;
+  @apply px-4;
+  @apply py-2;
+  min-width: min(100%, 1200px);
+}
