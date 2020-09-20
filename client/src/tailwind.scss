@@ -2,9 +2,127 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --text: #000000;
+  --bg-color: #ddd;
+  --outline-color: #aaaaaa;
+}
+
+body {
+  background-color: var(--bg-color);
+}
+
+h1 {
+  @apply text-6xl;
+  @apply font-bold;
+}
+
+h2 {
+  @apply text-4xl;
+  @apply font-bold;
+  @apply leading-9;
+  @apply mb-2;
+}
+
+hr {
+  @apply mt-2;
+  @apply mb-4;
+  @apply border;
+  border-color: var(--outline-color);
+}
+
+input {
+  @apply shadow-md;
+  @apply rounded-md;
+  @apply bg-white;
+  @apply text-lg;
+  @apply py-3;
+  @apply px-3;
+  @apply w-full;
+  @apply mb-3;
+}
+
+nav.heading {
+  @apply flex;
+  @apply px-3;
+  @apply mb-4;
+}
+
+nav.heading h1 {
+  @apply flex-1;
+}
+
 .container {
   @apply mx-auto;
   @apply px-4;
   @apply py-2;
   min-width: min(100%, 1200px);
+}
+
+.cards {
+  @apply flex;
+  @apply flex-wrap;
+}
+
+.cards .card {
+  @apply text-white;
+  @apply m-4;
+  @apply px-5;
+  @apply py-10;
+  @apply rounded-md;
+  @apply shadow-lg;
+  max-width: min(100%, 250px);
+}
+
+.cards .card hr {
+  @apply border-white;
+  @apply mt-4;
+  @apply mb-3;
+  @apply mr-2;
+}
+
+.cards .card small {
+  @apply text-xl;
+}
+
+.modal {
+  @apply absolute;
+  @apply top-0;
+  @apply z-50;
+  @apply w-screen;
+  @apply h-screen;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal .modal-card {
+  @apply mx-auto;
+  @apply mt-12;
+  @apply py-5;
+  @apply px-6;
+  background-color: #eee;
+  @apply rounded-md;
+  width: min(100%, 500px);
+}
+
+.modal .modal-card button.submitButton {
+  @apply bg-green-500;
+  @apply py-2;
+  @apply px-4;
+  @apply font-semibold;
+  @apply text-white;
+  @apply text-lg;
+  @apply rounded-md;
+  @apply shadow-md;
+}
+
+.modal .modal-card nav {
+  @apply flex;
+}
+
+.modal .modal-card nav h2 {
+  @apply flex-1;
+}
+
+.modal .modal-card nav button {
+  color: rgba(0, 0, 0, 0.5);
 }
