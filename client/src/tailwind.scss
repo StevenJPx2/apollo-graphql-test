@@ -42,6 +42,15 @@ input {
   @apply mb-3;
 }
 
+button.btn {
+  @apply py-2;
+  @apply px-4;
+  @apply font-semibold;
+  @apply text-lg;
+  @apply rounded-md;
+  @apply shadow-md;
+}
+
 nav.heading {
   @apply flex;
   @apply px-3;
@@ -74,6 +83,17 @@ nav.heading h1 {
   max-width: min(100%, 250px);
 }
 
+.cards .card .more-info {
+  @apply mt-2;
+}
+
+.cards .card .more-info .btn svg {
+  @apply mr-2;
+}
+
+.cards .card:hover .more-info {
+}
+
 .cards .card hr {
   @apply border-white;
   @apply mt-4;
@@ -104,15 +124,9 @@ nav.heading h1 {
   width: min(100%, 500px);
 }
 
-.modal .modal-card button.submitButton {
+.modal .modal-card button.btn.submit-button {
   @apply bg-green-500;
-  @apply py-2;
-  @apply px-4;
-  @apply font-semibold;
   @apply text-white;
-  @apply text-lg;
-  @apply rounded-md;
-  @apply shadow-md;
 }
 
 .modal .modal-card nav {

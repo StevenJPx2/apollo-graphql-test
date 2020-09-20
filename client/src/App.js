@@ -2,7 +2,11 @@ import React, { useState } from "react";
 import { useQuery, gql } from "@apollo/client";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { faTimes, faPlusCircle } from "@fortawesome/free-solid-svg-icons";
+import {
+  faTimes,
+  faPlusCircle,
+  faTrash,
+} from "@fortawesome/free-solid-svg-icons";
 
 library.add(faPlusCircle, faTimes);
 
@@ -57,6 +61,12 @@ function App() {
               <h2>{name}</h2>
               <hr />
               <small>{author.name}</small>
+              <section className="more-info">
+                <button className={`btn bg-${colorArray[index]}-700`}>
+                  <FontAwesomeIcon icon={faTrash} />
+                  Delete Book
+                </button>
+              </section>
             </section>
           ))}
         </article>
@@ -74,7 +84,7 @@ function App() {
             <input type="text" placeholder="Book Name" />
             <input type="text" placeholder="Author Name" />
             <input type="text" placeholder="Pages (Optional)" />
-            <button className="submitButton">Submit</button>
+            <button className="btn submit-button">Submit</button>
           </div>
         </div>
       )}
