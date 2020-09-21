@@ -7,4 +7,4 @@ Uses:
 - Apollo Server
 - Express
 
-Thought I would take this opportuinity to learn this anyway.
+Thought I would take this opportunity to learn this anyway.
