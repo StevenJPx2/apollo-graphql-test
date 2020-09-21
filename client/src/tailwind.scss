@@ -1,0 +1,206 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --text: #000000;
+  --bg-color: #ddd;
+  --outline-color: #aaaaaa;
+}
+
+body {
+  background-color: var(--bg-color);
+}
+
+h1 {
+  @apply text-6xl;
+  @apply font-bold;
+}
+
+h2 {
+  @apply text-4xl;
+  @apply font-bold;
+  @apply leading-9;
+  @apply mb-2;
+}
+
+hr {
+  @apply mt-2;
+  @apply mb-4;
+  @apply border;
+  border-color: var(--outline-color);
+}
+
+input {
+  @apply shadow-md;
+  @apply rounded-md;
+  @apply bg-white;
+  @apply text-lg;
+  @apply py-3;
+  @apply px-3;
+  @apply w-full;
+  @apply mb-3;
+}
+
+button.btn {
+  @apply py-2;
+  @apply px-4;
+  @apply font-semibold;
+  @apply text-lg;
+  @apply rounded-md;
+  @apply shadow-md;
+}
+
+nav.heading {
+  @apply flex;
+  @apply px-3;
+  @apply mb-4;
+  @apply relative;
+}
+
+nav.heading button {
+  @apply flex;
+}
+
+nav.heading button svg {
+  @apply ml-1;
+  @apply my-auto;
+}
+
+nav.heading h1 {
+  @apply flex-1;
+}
+
+nav.heading .dropdown {
+  @apply absolute;
+  @apply hidden;
+  bottom: -4rem;
+  right: 1rem;
+  @apply text-lg;
+  @apply bg-white;
+  @apply rounded-md;
+  @apply px-3;
+  @apply py-2;
+  @apply shadow-lg;
+}
+
+nav.heading button:hover + .dropdown {
+  @apply block;
+}
+
+nav.heading .dropdown:hover {
+  @apply block;
+}
+
+nav.heading .dropdown li {
+  @apply mb-2;
+  @apply border-black;
+}
+
+nav.heading .dropdown li:last-of-type {
+  @apply border-b-0;
+  @apply mb-0;
+}
+
+.container {
+  @apply mx-auto;
+  @apply px-4;
+  @apply py-2;
+  min-width: min(100%, 1200px);
+}
+
+.cards {
+  @apply flex;
+  @apply flex-wrap;
+}
+
+.cards .card {
+  @apply text-white;
+  @apply m-4;
+  @apply px-5;
+  @apply py-10;
+  @apply rounded-md;
+  @apply shadow-lg;
+  max-width: min(100%, 250px);
+}
+
+.cards .card .more-info {
+  @apply mt-2;
+}
+
+.cards .card .more-info .btn svg {
+  @apply mr-2;
+}
+
+.cards .card:hover .more-info {
+}
+
+.cards .card hr {
+  @apply border-white;
+  @apply mt-4;
+  @apply mb-3;
+  @apply mr-2;
+}
+
+.cards .card small {
+  @apply text-xl;
+}
+
+.modal {
+  @apply absolute;
+  @apply top-0;
+  @apply z-50;
+  @apply w-screen;
+  @apply h-screen;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal .modal-card {
+  @apply mx-auto;
+  @apply mt-12;
+  @apply py-5;
+  @apply px-6;
+  background-color: #eee;
+  @apply rounded-md;
+  width: min(100%, 500px);
+}
+
+.modal .modal-card button.btn.submit-button {
+  @apply bg-green-500;
+  @apply text-white;
+}
+
+.modal .modal-card nav {
+  @apply flex;
+}
+
+.modal .modal-card nav h2 {
+  @apply flex-1;
+}
+
+.modal .modal-card nav button {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.modal .modal-card .modal-dropdown {
+  @apply shadow-md;
+  @apply rounded-md;
+  @apply bg-white;
+  @apply text-lg;
+  @apply w-full;
+  @apply mb-3;
+}
+
+.modal .modal-card .modal-dropdown li {
+  @apply p-2;
+}
+
+.modal .modal-card .modal-dropdown li button {
+  @apply rounded-sm;
+  @apply py-1;
+  @apply px-2;
+}
+
+.modal .modal-card .modal-dropdown .author-selected {
+  @apply bg-gray-300;
+}

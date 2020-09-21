@@ -1,4 +1,13 @@
-# Apollo Graphql Test
+# Bookstore using Apollo and React
 
-I am going to create a version of 'Interactive Presentations', where hosts can create presentations and host them with
-attendees able to directly interact with the slides.
+In order to learn how backend using JS works, I decided to make a bookstore web app to test it out.
+
+### Backend uses:
+- Mongoose
+- Apollo Server
+- Express
+
+### Frontend uses:
+- React
+- Apollo Client
+- Tailwind CSS (with SCSS bindings)
