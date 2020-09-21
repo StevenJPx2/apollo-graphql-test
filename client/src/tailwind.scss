@@ -55,10 +55,51 @@ nav.heading {
   @apply flex;
   @apply px-3;
   @apply mb-4;
+  @apply relative;
+}
+
+nav.heading button {
+  @apply flex;
+}
+
+nav.heading button svg {
+  @apply ml-1;
+  @apply my-auto;
 }
 
 nav.heading h1 {
   @apply flex-1;
+}
+
+nav.heading .dropdown {
+  @apply absolute;
+  @apply hidden;
+  bottom: -4rem;
+  right: 1rem;
+  @apply text-lg;
+  @apply bg-white;
+  @apply rounded-md;
+  @apply px-3;
+  @apply py-2;
+  @apply shadow-lg;
+}
+
+nav.heading button:hover + .dropdown {
+  @apply block;
+}
+
+nav.heading .dropdown:hover {
+  @apply block;
+}
+
+nav.heading .dropdown li {
+  @apply mb-2;
+  @apply border-black;
+}
+
+nav.heading .dropdown li:last-of-type {
+  @apply border-b-0;
+  @apply mb-0;
 }
 
 .container {
@@ -139,4 +180,27 @@ nav.heading h1 {
 
 .modal .modal-card nav button {
   color: rgba(0, 0, 0, 0.5);
+}
+
+.modal .modal-card .modal-dropdown {
+  @apply shadow-md;
+  @apply rounded-md;
+  @apply bg-white;
+  @apply text-lg;
+  @apply w-full;
+  @apply mb-3;
+}
+
+.modal .modal-card .modal-dropdown li {
+  @apply p-2;
+}
+
+.modal .modal-card .modal-dropdown li button {
+  @apply rounded-sm;
+  @apply py-1;
+  @apply px-2;
+}
+
+.modal .modal-card .modal-dropdown .author-selected {
+  @apply bg-gray-300;
 }
